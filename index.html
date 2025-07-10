@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="flex flex-col items-center justify-center w-screen">
+
+    <div class="intro">
+        <p class="text-4xl !text-white logo-header">
+            <span class="logo">Bem</span><span class="logo">-vindo!</span>
+        </p>
+    </div>
+
+    <img src="./assets/ellipse.svg" alt="Ellipse Image" class="absolute -top-14 left-20 w-[300px] h-[300px]">
+
+    <header class="">
+        <ul class="text-lg">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#tech">Techs</a></li>
+            <li><a href="#projetos">Projeto</a></li>
+        </ul>
+    </header>
+
+    <main id="home" class="flex flex-col items-center justify-center h-screen">
+        <section class="relative flex flex-col justify-center items-center text-center w-screen h-full">
+            <p class="leagueSpartan text-6xl">Olá, sou a Geovanna</p>
+            <p class="text-[27px]">DESENVOLVEDORA FRONTEND WEB</p>
+
+            <section class="!mt-10">
+                <img src="./assets/icons/github.svg" alt="GitHub Icon" class="cursor-pointer w-6 h-6 inline-block">
+                <img src="./assets/icons/linkedin.svg" alt="Linkedin Icon" class="cursor-pointer w-6 h-6 inline-block">
+            </section>
+
+            <section class="absolute bottom-0 right-0">
+                <img src="./assets/ellipse2.svg" alt="Ellipse Image 2" class="w-[300px] h-[300px]">
+                <div class="bg-linear-to-r from-[#8C52FF] to-[#FF57F8] h-[0.8px] w-[300px]"></div>
+                <p>oi</p>
+            </section>
+        </section>
+
+    </main>
+
+    <section id="sobre" class="flex justify-center items-center w-full h-screen">
+        <div class="w-[300px] !mr-[300px]">
+            <p class="leagueSpartan text-4xl !mb-6">Sobre mim 👩🏽‍💻</p>
+            <p class="!mb-4">Tenho 21 anos, sou brasileira e moro em Três Lagoas, interior de Mato Grosso do Sul.</p>
+            <p class="!mb-4">Atuo como Desenvolvedora Frontend Web há 3 anos. Durante 1 ano como Quality Assurance e transicionei para Dev em cerca de 6 meses.</p>
+            <p>Curso Sistemas de Informação pela UF.</p>
+        </div>
+        <div class="bg-linear-to-r from-[#8C52FF] to-[#FF57F8] h-[350px] w-[350px] rounded-full ">
+            <img src="./assets/user.png" width="300" height="300" alt="User Image">
+        </div>
+    </section>
+
+    <section id="tech" class="flex justify-center items-center w-full h-screen">
+        <img class="absolute opacity-20 z-[1]" src="./assets/vector2.svg" alt="" width="100%">
+        <img class="absolute opacity-20 z-[2]" src="./assets/vector1.svg" alt="" width="100%">
+
+        <div>
+            <p class="leagueSpartan text-4xl !mb-6">Minhas techs</p>
+
+            <div class="flex flex-row">
+                <img src="./assets/icons/html.svg" width="40" class="!mr-2" />
+                <img src="./assets/icons/css3.svg" width="40" class="!mr-2" />
+                <img src="./assets/icons/sass.svg" width="40" class="!mr-2" />
+                <img src="./assets/icons/javascript.svg" width="40" class="!mr-2 rounded-md" />
+                <img src="./assets/icons/typescript.svg" width="40" class="!mr-2 rounded-md" />
+                <img src="./assets/icons/vuejs.svg" width="40" class="!mr-2" />
+            </div>
+            <div class="flex flex-row !mt-2">
+                <img src="./assets/icons/nuxtjs.svg" width="40" class="!mr-2" />
+                <img src="./assets/icons/tailwindcss.svg" width="40" class="!mr-2" />
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="flex justify-center items-center w-full h-screen bg-blue-200">
+        <p>SESSÃO PROJETOS</p>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="app.js"></script>
+</body>
+</html>
