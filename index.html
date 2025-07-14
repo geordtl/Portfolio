@@ -8,85 +8,208 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Portifólio | Geovanna</title>
 </head>
 
-<body class="flex flex-col items-center justify-center w-screen">
+<body class="flex flex-col items-center justify-center h-full w-screen">
 
-    <div class="intro">
+    <div class="intro" id="intro">
         <p class="text-4xl !text-white logo-header">
-            <span class="logo">Bem</span><span class="logo">-vindo!</span>
+            <span class="logo hidden">Bem</span><span class="logo hidden">-vindo!</span>
         </p>
     </div>
+<!-- 
+       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                </rect>
+                <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                </rect>
+                <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                </rect>
+            </svg> -->
 
-    <img src="./assets/ellipse.svg" alt="Ellipse Image" class="absolute -top-14 left-20 w-[300px] h-[300px]">
+    <img src="./assets/ellipse.svg" alt="Ellipse Image" class="absolute -top-14 left-20 w-[150px] h-[150px] md:w-[300px] md:h-[300px]">
 
-    <header class="">
-        <ul class="text-lg">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#sobre">Sobre mim</a></li>
-            <li><a href="#tech">Techs</a></li>
-            <li><a href="#projetos">Projeto</a></li>
-        </ul>
+    <header class="sticky top-0">
+        <nav>
+            <ul class="text-sm md:text-lg gap-4">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#tech">Techs</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main id="home" class="flex flex-col items-center justify-center h-screen">
+    <main id="home" class="w-screen h-screen">
         <section class="relative flex flex-col justify-center items-center text-center w-screen h-full">
-            <p class="leagueSpartan text-6xl">Olá, sou a Geovanna</p>
-            <p class="text-[27px]">DESENVOLVEDORA FRONTEND WEB</p>
+            <p id="textos" class="animate-me leagueSpartan text-3xl md:text-6xl">Olá, sou a Geovanna</p>
+            <p id="textos" class="animate-me md:text-[27px]">DESENVOLVEDORA FRONTEND WEB</p>
 
-            <section class="!mt-10">
+            <section class="mt-10">
                 <img src="./assets/icons/github.svg" alt="GitHub Icon" class="cursor-pointer w-6 h-6 inline-block">
                 <img src="./assets/icons/linkedin.svg" alt="Linkedin Icon" class="cursor-pointer w-6 h-6 inline-block">
             </section>
 
             <section class="absolute bottom-0 right-0">
-                <img src="./assets/ellipse2.svg" alt="Ellipse Image 2" class="w-[300px] h-[300px]">
-                <div class="bg-linear-to-r from-[#8C52FF] to-[#FF57F8] h-[0.8px] w-[300px]"></div>
-                <p>oi</p>
+                <img src="./assets/ellipse2.svg" alt="Ellipse Image 2" class="w-[150px] h-[150px] md:w-[300px] md:h-[300px]">
+                <!-- <div class="bg-linear-to-r from-[#8C52FF] to-[#FF57F8] h-[0.8px] w-[300px]"></div> -->
             </section>
         </section>
 
     </main>
 
-    <section id="sobre" class="flex justify-center items-center w-full h-screen">
-        <div class="w-[300px] !mr-[300px]">
-            <p class="leagueSpartan text-4xl !mb-6">Sobre mim 👩🏽‍💻</p>
-            <p class="!mb-4">Tenho 21 anos, sou brasileira e moro em Três Lagoas, interior de Mato Grosso do Sul.</p>
-            <p class="!mb-4">Atuo como Desenvolvedora Frontend Web há 3 anos. Durante 1 ano como Quality Assurance e transicionei para Dev em cerca de 6 meses.</p>
-            <p>Curso Sistemas de Informação pela UF.</p>
+    <section id="sobre" class="relative flex justify-center flex-row items-center w-screen h-screen">
+        <div id="textos" aria-hidden="true" class="z-1 bg-white animate-me text-xs border-solid border-1 border-gray-400 rounded-xl w-[250px] sm:w-[40%] p-6">
+            <p class="leagueSpartan text-gray-700 text-lg sm:text-xl md:text-4xl mb-6">Sobre mim 👩🏽‍💻</p>
+            <p class="text-xs mb-4">Tenho 21 anos, sou brasileira e moro em Três Lagoas, interior de Mato Grosso do Sul.</p>
+            <p class="text-xs mb-4">Sou apaixonada por tecnologia! Atuo como Desenvolvedora Frontend Web há 3 anos. Durante 1 ano como Quality Assurance e transicionei para Dev em cerca de 6 meses.</p>
+            <p class="text-xs">Curso Sistemas de Informação pela Universidade Federal de Mato Grosso do Sul (campus CPTL ||).</p>
         </div>
-        <div class="bg-linear-to-r from-[#8C52FF] to-[#FF57F8] h-[350px] w-[350px] rounded-full ">
-            <img src="./assets/user.png" width="300" height="300" alt="User Image">
-        </div>
+        <!-- <div class="bg-linear-to-r from-[#8C52FF] to-[#FF57F8] h-[150px] w-[150px] md:h-[350px] md:w-[350px] rounded-full m-2"> -->
+            <div class="flex justify-center items-center w-[20%] sm:w-[25%] z-1">
+                <img src="./assets/circle.svg" class="absolute w-[130px] sm:w-[310px]"  alt="Circle">
+                <img src="./assets/user.png" class="absolute w-[120px] sm:w-[280px]" alt="User Image">
+            </div>
+        <!-- </div> -->
+
+        
+        <img class="absolute left-0 right-0 w-full bottom-0 z-[0]" src="https://capsule-render.vercel.app/api?type=waving&height=150&color=0:c334eb,100:ff2176&section=footer"/>
     </section>
 
-    <section id="tech" class="flex justify-center items-center w-full h-screen">
+    <section id="tech" class="flex justify-start items-start w-full h-screen">
         <img class="absolute opacity-20 z-[1]" src="./assets/vector2.svg" alt="" width="100%">
         <img class="absolute opacity-20 z-[2]" src="./assets/vector1.svg" alt="" width="100%">
 
-        <div>
-            <p class="leagueSpartan text-4xl !mb-6">Minhas techs</p>
+        <div class="flex flex-col justify-center w-full sm:w-[50%] p-6 sm:m-[150px]">
+            <p class="leagueSpartan text-gray-700 text-3xl sm:text-6xl mb-2 p-4">Minhas techs</p>
 
-            <div class="flex flex-row">
-                <img src="./assets/icons/html.svg" width="40" class="!mr-2" />
-                <img src="./assets/icons/css3.svg" width="40" class="!mr-2" />
-                <img src="./assets/icons/sass.svg" width="40" class="!mr-2" />
-                <img src="./assets/icons/javascript.svg" width="40" class="!mr-2 rounded-md" />
-                <img src="./assets/icons/typescript.svg" width="40" class="!mr-2 rounded-md" />
-                <img src="./assets/icons/vuejs.svg" width="40" class="!mr-2" />
+            <div class="flex flex-row px-4">
+                <img src="./assets/icons/html.svg" class="mr-2 w-8 sm:w-12" />
+                <img src="./assets/icons/css3.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
+                <img src="./assets/icons/sass.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
+                <img src="./assets/icons/javascript.svg" class="mr-2 w-8 sm:w-12" class="mr-2 rounded-md" />
+                <img src="./assets/icons/typescript.svg" class="mr-2 w-8 sm:w-12" class="mr-2 rounded-md" />
+                <img src="./assets/icons/vuejs.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
             </div>
-            <div class="flex flex-row !mt-2">
-                <img src="./assets/icons/nuxtjs.svg" width="40" class="!mr-2" />
-                <img src="./assets/icons/tailwindcss.svg" width="40" class="!mr-2" />
+            <div class="flex flex-row mt-1 p-4">
+                <img src="./assets/icons/nuxtjs.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
+                <img src="./assets/icons/tailwindcss.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
             </div>
+
+            <section class="flex flex-row flex-wrap justify-between mt-8 gap-2">
+                <div class="text-gray-700 w-[350px] border-1 border-gray-400 border-solid rounded-4xl p-6">
+                    <p class="leagueSpartan text-xl sm:text-3xl mb-2">Hard skills</p>
+                    <p class="text-sm sm:text-md">- Inglês intermediário</p>
+                    <p class="text-sm sm:text-md">- Experiência com metodologias ágeis</p>
+                    <p class="text-sm sm:text-md">- Conhecimentos técnicos em linguagens de programação</p>
+                    <p class="text-sm sm:text-md">- Conhecimento básico em design e experiência do usuário</p>
+                </div>
+
+                <div class="text-gray-700 w-[350px] border-1 border-gray-400 border-solid rounded-4xl p-6">
+                    <p class="text-gray-700 leagueSpartan text-xl sm:text-3xl mb-2">Soft skills</p>
+    
+                    <p class="text-sm sm:text-md">- Criatividade</p>
+                    <p class="text-sm sm:text-md">- Trabalho em equipe</p>
+                    <p class="text-sm sm:text-md">- Pensamento analítico e inovação</p>
+                    <p class="text-sm sm:text-md">- Gestão do tempo</p>
+                    <p class="text-sm sm:text-md">- Resiliência</p>
+                </div>
+            </section>
+
+        </div>
+        <div class="flex justify-center w-[50%] m-16">
+            <p class="leagueSpartan text-4xl mb-6">Experiência</p>
+
+            
+
         </div>
     </section>
 
-    <section id="projetos" class="flex justify-center items-center w-full h-screen bg-blue-200">
-        <p>SESSÃO PROJETOS</p>
+    <section id="projetos" class="flex justify-center flex-col w-full px-4">
+        <p class="leagueSpartan text-gray-700 text-3xl sm:text-6xl mb-2 p-4">Projetos</p>
+
+        <section class="flex flex-row flex-wrap justify-center gap-4 items-center">
+            <div class="p-[1px] rounded-4xl bg-gradient-to-r from-[#8C52FF] to-[#FF57F8]">
+                <div class="relative sm:w-[400px] sm:h-[350px] bg-white rounded-4xl p-6">
+                    <p class="leagueSpartan text-md sm:text-4xl text-gray-700">Aplicativo TDAH</p>
+                    <p class="text-xs sm:text-sm text-gray-400">22/07/2021</p>
+                    <p class="text-xs sm:text-sm mt-4 text-gray-600">Este aplicativo foi usado para o trabalho de conclusão de curso do IFMS. <br>Consiste em um aplicativo com a didática de um jogo para auxiliar crianças na alfabetização, especialmente crianças com Transtorno do Défict de Atenção com Hiperatividade (TDAH).</p>
+                    <p class="text-xs my-4 text-gray-600">@diegovskrbm e @geordtl</p>
+    
+                    <a class="underline text-xs text-[#8C52FF]" href="https://github.com/geordtl/TCC-TDAH">Github</a>
+                    <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ Java</p>
+                </div>
+            </div>
+            <div class="p-[1px] rounded-4xl bg-gradient-to-r from-[#8C52FF] to-[#FF57F8]">
+                <div class="relative sm:w-[400px] sm:h-[350px] bg-white rounded-4xl p-6">
+                    <p class="leagueSpartan text-md sm:text-4xl text-gray-700">UFMS Farm</p>
+                    <p class="text-xs sm:text-sm text-gray-400">25/11/2024</p>
+                    <p class="text-sm mt-4 text-gray-600">Projeto acadêmico visando conscientizar a ODS 15 (Objetivos da ONU - Vida terrestre) de forma gamificada e divertida.
+                        <br> Foram implementados mecanismos que encerram o cicle de vida da planta caso não seja cuidada.
+                    </p>
+                    <p class="text-xs my-4 text-gray-600">@xeanm28x e @geordtl</p>
+    
+                    <a class="underline text-xs text-[#8C52FF]" href="https://geordtl.itch.io/ufms-farm">Itch.io</a>
+                    <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ Unity, C#, LibreSprite</p>
+                </div>
+            </div>
+            <div class="p-[1px] rounded-4xl bg-gradient-to-r from-[#8C52FF] to-[#FF57F8]">
+                <div class="relative sm:w-[400px] sm:h-[350px] bg-white rounded-4xl p-6">
+                    <p class="leagueSpartan text-md sm:text-4xl text-gray-700">Uber idosos</p>
+                    <p class="text-xs sm:text-sm text-gray-400">15/06/2023</p>
+                    <p class="text-sm mt-4 text-gray-600">Projeto acadêmico com apenas o Design criado a fim de auxiliar o processo de lomoção para idosos. Contando com perfis de auxiliares no aplicativo, assegurando mais segurança.
+                        <br> Validado e apresentado em sala.
+                    </p>
+                    <p class="text-xs my-4 text-gray-600">@chsabreu e @geordtl</p>
+    
+                    <a class="underline text-xs text-[#8C52FF]" href="https://github.com/geordtl/Uber-Idosos">Github</a>
+                    <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ HTML, CSS</p>
+                </div>
+            </div>
+            <div class="p-[1px] rounded-4xl bg-gradient-to-r from-[#8C52FF] to-[#FF57F8]">
+                <div class="relative sm:w-[400px] sm:h-[350px] bg-white rounded-4xl p-6">
+                    <p class="leagueSpartan text-md sm:text-4xl text-gray-700">Humor diário</p>
+                    <p class="text-xs sm:text-sm text-gray-400">04/07/2025</p>
+                    <p class="text-sm mt-4 text-gray-600">Projeto acadêmico com o objetivo de registrar o humor diário do usuário, permitindo acessar o histório dos dias anteriores.
+                        <br> Integrado com Docker e requisição por Axios
+                    </p>
+                    <p class="text-xs my-4 text-gray-600">@alisonfrd e @geordtl</p>
+    
+                    <a class="underline text-xs text-[#8C52FF]" href="https://github.com/geordtl/Uber-Idosos">Github</a>
+                    <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ Vuejs, Tailwindcss, Docker, SQLAlchemy, Flask</p>
+                </div>
+            </div>
+            <div class="p-[1px] rounded-4xl bg-gradient-to-r from-[#8C52FF] to-[#FF57F8]">
+                <div class="relative sm:w-[400px] sm:h-[350px] bg-white rounded-4xl p-6">
+                    <p class="leagueSpartan text-md sm:text-4xl text-gray-700">ZapBoard</p>
+                    <p class="text-xs sm:text-sm text-gray-400">30/05/2023</p>
+                    <p class="text-sm mt-4 text-gray-600">Projeto acadêmico com o objetivo de registrar entradas e saídas de uma empresa. Os cálculos e indicadores são feitos com um cálculo em tempo real.
+                    </p>
+                    <p class="text-xs my-4 text-gray-600">@geordtl</p>
+    
+                    <a class="underline text-xs text-[#8C52FF]" href="https://github.com/geordtl/Uber-Idosos">Github</a>
+                    <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ Vuejs, Firestore</p>
+                </div>
+            </div>
+        </section>
+
     </section>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
