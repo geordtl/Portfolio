@@ -1,6 +1,7 @@
 let intro = document.querySelector('.intro');
 let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
+let body = document.getElementsByTagName('body')
 gsap.registerPlugin(SplitText,TextPlugin, ScrollTrigger)
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -218,6 +219,12 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 sections.forEach(section => observer.observe(section));
+
+document.getElementById('sendmail').addEventListener('click', function(event){
+  event.preventDefault();
+    window.location = "mailto:geogeovannarn@gmail.com";
+
+})
 
     
       
