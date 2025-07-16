@@ -43,6 +43,10 @@ li>a:after {
     transition: width .3s;
 }
 
+li>a.active-section:after {
+  width: 100%;
+}
+
 li>a:hover:after {
     width: 100%;
 }
@@ -66,14 +70,14 @@ header h4 {
     font-size: 1.5rem;
 }
 
-/* .intro {
+.intro {
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to right, var(--purple), var(--pink));
+    background-image: linear-gradient(to right, var(--purple), #c876ff);
     transition: 1s;
 }
 
@@ -102,7 +106,7 @@ header h4 {
     bottom: 150px;
     opacity: 0;
     transition: ease-in-out 0.5s;
-} 
+}  */
 
 .loader{
   margin: 0 0 2em;
@@ -114,8 +118,20 @@ header h4 {
   display: inline-block;
   vertical-align: top;
 } 
-  */
 
+.box-left {
+      /* width: 200px; */
+      /* height: 100px; */
+      opacity: 0;
+      transform: translateX(300px); /* começa fora da tela (para a direita) */
+    }
+
+    .box-right {
+      /* width: 200px; */
+      /* height: 100px; */
+      opacity: 0;
+      transform: translateX(-300px); /* começa fora da tela (para a esquerda) */
+    }
 /*
   Set the color of the icon
 */
@@ -144,3 +160,174 @@ svg>rect{
   /* text-align: left; */
   perspective: 500px;
 }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Linha vertical principal */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #d1d5db;
+  transform: translateX(-50%);
+}
+
+.timeline-line-fill {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--pink), var(--purple));
+  height: 0;
+  transition: height 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Items da timeline */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item.left {
+  flex-direction: row-reverse;
+  transform: translateX(-50px);
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-content {
+  width: 45%;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--purple);
+  position: relative;
+}
+
+.timeline-item.left .timeline-content {
+  border-left: none;
+  border-right: 4px solid var(--purple);
+  text-align: right;
+}
+
+.duration {
+  color: var(--purple);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.descriptions p:last-child {
+  margin-bottom: 0;
+}
+
+/* Pontos da timeline */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: var(--purple);
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.timeline-dot.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.dot-inner {
+  width: 100%;
+  height: 100%;
+  background: #a855f7;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .timeline-item.left {
+    flex-direction: column !important;
+  }
+
+  .timeline-content {
+    width: 90%;
+    margin: 0 auto 1rem auto;
+    text-align: left !important;
+    border-left: 4px solid var(--purple) !important;
+    border-right: none !important;
+  }
+
+  .timeline-line {
+    left: 2rem;
+  }
+
+  .timeline-dot {
+    left: 2rem;
+    position: absolute;
+    top: 1rem;
+  }
+}
+
