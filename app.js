@@ -197,16 +197,20 @@ function animateCards() {
 function setupNavHighlightOnScroll() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove('active-section'));
-        const id = entry.target.id;
-        const activeLink = document.querySelector(`nav a[href="#${id}"]`);
-        if (activeLink) activeLink.classList.add('active-section');
+      const id = entry.target.id;
+      const link = document.querySelector(`nav a[href="#${id}"]`);
+      if (link) {
+        if (entry.isIntersecting) {
+          link.classList.add('active-section');
+        } else {
+          link.classList.remove('active-section');
+        }
       }
     });
   }, { threshold: 0.5 });
 
   sections.forEach(section => observer.observe(section));
+
 }
 
 // Função para botão de e-mail

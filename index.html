@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,16 +18,16 @@
     <title>Portifólio | Geovanna</title>
 </head>
 
-<body class="flex flex-col items-center justify-center h-full w-screen">
+<body class="relative min-h-screen w-full overflow-x-hidden">
 
     <div class="intro" id="intro"></div>
     
     <img src="./public/ellipse.svg" alt="Ellipse Image"
         class="absolute -top-14 left-20 w-[150px] h-[150px] md:w-[300px] md:h-[300px]">
 
-    <header id="header" class="opacity-0 pointer-events-none sticky top-10 z-2 backdrop-blur-md bg-white/60 rounded-lg transition-opacity duration-700">
+    <header id="header" class="!sticky top-10 z-30 w-full max-w-3xl mx-auto opacity-0 pointer-events-none backdrop-blur-md bg-white/60 rounded-lg transition-opacity duration-700 flex justify-center">
         <nav class="flex flex-row items-center">
-            <ul class="flex flex-row sticky text-xs md:text-lg cursor-pointer gap-4 m-4 p-0">
+            <ul class="flex flex-row text-xs md:text-lg cursor-pointer gap-4 m-4 p-0">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#tech">Techs</a></li>
@@ -36,8 +37,8 @@
         </nav>
     </header>
 
-    <main id="home" class="w-screen h-screen">
-        <section class="relative flex flex-col justify-center items-center text-center w-screen h-full">
+    <div id="home" class="flex flex-col items-center justify-center w-screen h-screen">
+        <div class="relative flex flex-col justify-center items-center text-center w-screen h-full">
             <p id="textos" class="animate-me leagueSpartan text-3xl md:text-6xl">Olá, sou a Geovanna</p>
             <p id="textos" class="animate-me md:text-[27px]">DESENVOLVEDORA FRONTEND WEB</p>
 
@@ -46,7 +47,7 @@
                     Currículo
                 </a>
             </button> -->
-            <section class="mt-2">
+            <div class="mt-2">
                 <a href="https://github.com/geordtl" target="_blank">
                     <img src="./public/icons/github.svg" alt="GitHub Icon" class="cursor-pointer w-6 h-6 inline-block">
                 </a>
@@ -54,15 +55,15 @@
                     <img src="./public/icons/linkedin.svg" alt="Linkedin Icon"
                         class="cursor-pointer w-6 h-6 inline-block">
                 </a>
-            </section>
+            </div>
 
-            <section class="absolute bottom-0 right-0">
+            <div class="absolute bottom-0 right-0">
                 <img src="./public/ellipse2.svg" alt="Ellipse Image 2"
                     class="w-[150px] h-[150px] md:w-[300px] md:h-[300px]">
-            </section>
-        </section>
+            </div>
+        </div>
 
-    </main>
+    </div>
 
     <section id="sobre" class="relative flex justify-center flex-row items-center w-screen h-full py-20">
         <div id="textos" aria-hidden="true"
@@ -71,8 +72,7 @@
             <p class="text-xs text-gray-500 md:text-lg mb-4">Tenho 21 anos, sou brasileira e moro em Três Lagoas,
                 interior de Mato Grosso do Sul.</p>
             <p class="text-xs text-gray-500 md:text-lg mb-4">Sou apaixonada por tecnologia! Atuo como Desenvolvedora
-                Frontend Web há 3 anos. Durante 1 ano como Quality Assurance e transicionei para Dev em cerca de 6
-                meses.</p>
+                Frontend Web há 3 anos. Sempre estudando e em busca de conhecimento!</p>
             <p class="text-xs text-gray-500 md:text-lg">Curso Sistemas de Informação pela Universidade Federal de Mato
                 Grosso do Sul (campus CPTL ||).</p>
         </div>
@@ -237,10 +237,10 @@
                 <div class="relative sm:w-[400px] sm:h-[370px] bg-white rounded-4xl p-6">
                     <p class="leagueSpartan text-md sm:text-2xl text-gray-700">Uber para idosos</p>
                     <p class="text-xs sm:text-sm text-gray-400">15/06/2023</p>
-                    <p class="text-[12px] sm:text-sm mt-4 text-gray-600">Projeto acadêmico com apenas o Design criado a fim de
+                    <p class="text-[12px] sm:text-sm mt-4 text-gray-600">Projeto acadêmico com apenas o design criado a fim de
                         auxiliar o processo de locomoção para idosos. Contando com perfis de auxiliares no aplicativo,
-                        assegurando mais segurança.
-                        <br> Validado e apresentado em sala.
+                        garantindo mais segurança.
+                        <br> validado e apresentado em sala.
                     </p>
                     <p class="text-xs my-4 text-gray-600">@chsabreu e @geordtl</p>
 
