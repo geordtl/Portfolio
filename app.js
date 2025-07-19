@@ -1,72 +1,14 @@
-let intro = document.querySelector('.intro');
-let logo = document.querySelector('.logo-header');
-let logoSpan = document.querySelectorAll('.logo');
-let body = document.getElementsByTagName('body')
-gsap.registerPlugin(SplitText,TextPlugin, ScrollTrigger)
+// Seletores principais
+const intro = document.querySelector('.intro');
+const header = document.getElementById('header');
+const logoHeader = document.querySelector('.logo-header');
+const logoSpans = document.querySelectorAll('.logo');
+const bodyChildren = document.querySelectorAll('body > *:not(.intro)');
+const sendMailBtn = document.getElementById('sendmail');
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
 
-window.addEventListener('DOMContentLoaded', () => {
-
-    setTimeout(() => {
-        logoSpan.forEach((span, idx) => {
-            setTimeout(() => {
-                span.classList.add('active');
-            }, (idx + 1) * 400);
-        });
-
-        setTimeout(() => {
-            logoSpan.forEach((span, idx) => {
-                span.classList.remove('active');
-                span.classList.add('fade');
-            });
-        }, 2000);
-
-        setTimeout(() => {
-            intro.style.top = '-100vh';
-            logoSpan.classList.add('hidden');
-        }, 500);
-    });
-})
-
-document.fonts.ready.then(() => {
-  gsap.set("#textos", { opacity: 1 });
-  let split = SplitText.create(".animate-me", { type: "words", aria: "hidden" });
-
-  gsap.from(split.words, {
-    opacity: 0,
-    duration: 2,
-    ease: "sine.out",
-    stagger: 0.1,
-  });
-});
-
-
-    gsap.utils.toArray(".box-left").forEach(box => {
-      gsap.to(box, {
-        scrollTrigger: {
-          trigger: box,
-          start: "top 100%", // quando o topo da div chegar a 80% da tela
-          toggleActions: "play none none none",
-        },
-        x: 0,        // move de volta para o centro
-        opacity: 1,  // fade in
-        duration: 1.2,
-        ease: "power2.out"
-      })
-    });
-
-    gsap.utils.toArray(".box-right").forEach((el) => {
-  gsap.to(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "top 100%",
-      toggleActions: "play none none none"
-    },
-    x: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "power2.out"
-  }); 
-});
+gsap.registerPlugin(SplitText, TextPlugin, ScrollTrigger);
 
 class TimelineAnimation {
   constructor() {
@@ -81,7 +23,6 @@ class TimelineAnimation {
 
   init() {
     this.setupIntersectionObserver()
-    this.animateTitle()
   }
 
   setupIntersectionObserver() {
@@ -101,14 +42,6 @@ class TimelineAnimation {
     }, options)
 
     observer.observe(this.timeline)
-  }
-
-  animateTitle() {
-    const title = document.querySelector(".title")
-    setTimeout(() => {
-      title.style.opacity = "1"
-      title.style.transform = "translateY(0)"
-    }, 200)
   }
 
   startTimelineAnimation() {
@@ -180,51 +113,116 @@ class TimelineAnimation {
   }
 }
 
-// Inicializar quando o DOM estiver carregado
-document.addEventListener("DOMContentLoaded", () => {
-  new TimelineAnimation()
-})
+// Função para animação de intro
+function playIntroAnimation() {
+  // Esconde tudo exceto intro
+  bodyChildren.forEach(el => el.style.display = 'none');
 
-// Adicionar alguns efeitos extras de interação
-document.addEventListener("DOMContentLoaded", () => {
-  const timelineItems = document.querySelectorAll(".timeline-content")
+  setTimeout(() => {
+    logoSpans.forEach((span, idx) => {
+      setTimeout(() => span.classList.add('active'), (idx + 1) * 400);
+    });
 
-  timelineItems.forEach((item) => {
-    item.addEventListener("mouseenter", function () {
-      this.style.transform = "translateY(-5px)"
-      this.style.boxShadow = "0 10px 25px -5px rgba(0, 0, 0, 0.1)"
-    })
+    setTimeout(() => {
+      logoSpans.forEach(span => {
+        span.classList.remove('active');
+        span.classList.add('fade');
+      });
+    }, 2000);
 
-    item.addEventListener("mouseleave", function () {
-      this.style.transform = "translateY(0)"
-      this.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
-    })
-  })
+    setTimeout(() => {
+      intro.style.top = '-100vh';
+      bodyChildren.forEach(el => el.style.display = '');
+      logoSpans.forEach(span => span.classList.add('hidden'));
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+      animateCards();
+      new TimelineAnimation(); 
 
+      if (header) {
+        setTimeout(() => {
+          header.classList.remove('opacity-0', 'pointer-events-none');
+        }, 500);
+      }
+    }, 1000);
 
-})
-
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav a');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => link.classList.remove('active-section'));
-      const id = entry.target.id;
-      const activeLink = document.querySelector(`nav a[href="#${id}"]`);
-      if (activeLink) activeLink.classList.add('active-section');
-    }
   });
-}, { threshold: 0.5 });
+}
 
-sections.forEach(section => observer.observe(section));
+// Função para animação de textos
+function animateTexts() {
+  document.fonts.ready.then(() => {
+    gsap.set(".textos", { opacity: 1 });
+    let split = SplitText.create(".animate-me", { type: "words", aria: "hidden" });
+    gsap.from(split.words, {
+      opacity: 0,
+      duration: 2,
+      ease: "sine.out",
+      stagger: 0.1,
+    });
+  });
+}
 
-document.getElementById('sendmail').addEventListener('click', function(event){
-  event.preventDefault();
-    window.location = "mailto:geogeovannarn@gmail.com";
+// Função para animação dos cards
+function animateCards() {
+  gsap.utils.toArray(".box-left").forEach(box => {
+    gsap.to(box, {
+      scrollTrigger: {
+        trigger: box,
+        start: "top 100%",
+        toggleActions: "play none none none",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: "power2.out"
+    });
+  });
 
-})
+  gsap.utils.toArray(".box-right").forEach(box => {
+    gsap.to(box, {
+      scrollTrigger: {
+        trigger: box,
+        start: "top 100%",
+        toggleActions: "play none none none"
+      },
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out"
+    });
+  });
+}
 
-    
-      
+// Função para navegação ativa
+function setupNavHighlightOnScroll() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.remove('active-section'));
+        const id = entry.target.id;
+        const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+        if (activeLink) activeLink.classList.add('active-section');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+// Função para botão de e-mail
+function setupSendMail() {
+  if (sendMailBtn) {
+    sendMailBtn.addEventListener('click', function(event){
+      event.preventDefault();
+      window.location = "mailto:geogeovannarn@gmail.com";
+    });
+  }
+}
+
+// Inicialização geral
+document.addEventListener("DOMContentLoaded", () => {
+  playIntroAnimation();
+  animateTexts();
+  setupNavHighlightOnScroll();
+  setupSendMail();
+});

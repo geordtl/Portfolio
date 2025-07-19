@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/source/apple/96/personal-computer_1f4bb.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Portifólio | Geovanna</title>
 </head>
 
 <body class="flex flex-col items-center justify-center h-full w-screen">
 
-    <div class="intro" id="intro">
-        <!-- <p class="leagueSpartan text-xl sm:text-4xl !text-white logo-header"> -->
-            <!-- <span class="logo hidden">Bem</span><span class="logo hidden">-vindo!</span> -->
-        <!-- </p> -->
-    </div>
+    <div class="intro" id="intro"></div>
+    
+    <img src="./public/ellipse.svg" alt="Ellipse Image"
+        class="absolute -top-14 left-20 w-[150px] h-[150px] md:w-[300px] md:h-[300px]">
 
-    <img src="./public/ellipse.svg" alt="Ellipse Image" class="absolute -top-14 left-20 w-[150px] h-[150px] md:w-[300px] md:h-[300px]">
-
-    <header id="header" class="!sticky top-10 z-2 backdrop-blur-md bg-white/60 rounded-lg">
+    <header id="header" class="opacity-0 pointer-events-none sticky top-10 z-2 backdrop-blur-md bg-white/60 rounded-lg transition-opacity duration-700">
         <nav class="flex flex-row items-center">
-            <ul class="text-xs md:text-lg gap-4">
+            <ul class="flex flex-row sticky text-xs md:text-lg cursor-pointer gap-4 m-4 p-0">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#tech">Techs</a></li>
@@ -38,67 +41,74 @@
             <p id="textos" class="animate-me leagueSpartan text-3xl md:text-6xl">Olá, sou a Geovanna</p>
             <p id="textos" class="animate-me md:text-[27px]">DESENVOLVEDORA FRONTEND WEB</p>
 
-            <button class="mb-2 border-1 border-gray-500 text-gray-800 rounded-lg px-4 py-2 cursor-pointer hover:border-[#FF57F8] hover:text-[#FF57F8] duration-150 ease-in mt-10">
+            <!-- <button class="mb-2 border-1 border-gray-500 text-gray-800 rounded-lg px-4 py-2 cursor-pointer hover:border-[#FF57F8] hover:text-[#FF57F8] duration-150 ease-in mt-10">
                 <a href="./public/curriculo.png" target="_blank">
                     Currículo
                 </a>
-            </button>
+            </button> -->
             <section class="mt-2">
                 <a href="https://github.com/geordtl" target="_blank">
                     <img src="./public/icons/github.svg" alt="GitHub Icon" class="cursor-pointer w-6 h-6 inline-block">
                 </a>
                 <a href="https://www.linkedin.com/in/geovanna-rodrigues-tl" target="_blank">
-                    <img src="./public/icons/linkedin.svg" alt="Linkedin Icon" class="cursor-pointer w-6 h-6 inline-block">
+                    <img src="./public/icons/linkedin.svg" alt="Linkedin Icon"
+                        class="cursor-pointer w-6 h-6 inline-block">
                 </a>
             </section>
 
             <section class="absolute bottom-0 right-0">
-                <img src="./public/ellipse2.svg" alt="Ellipse Image 2" class="w-[150px] h-[150px] md:w-[300px] md:h-[300px]">
-                <!-- <div class="bg-linear-to-r from-[#8C52FF] to-[#FF57F8] h-[0.8px] w-[300px]"></div> -->
+                <img src="./public/ellipse2.svg" alt="Ellipse Image 2"
+                    class="w-[150px] h-[150px] md:w-[300px] md:h-[300px]">
             </section>
         </section>
 
     </main>
 
     <section id="sobre" class="relative flex justify-center flex-row items-center w-screen h-full py-20">
-        <div id="textos" aria-hidden="true" class="z-1 bg-white animate-me text-xs border-solid border-1 border-gray-400 rounded-xl w-[250px] sm:w-[40%] p-6">
+        <div id="textos" aria-hidden="true"
+            class="z-1 bg-white animate-me text-xs border-solid border-1 border-gray-400 rounded-xl w-[250px] sm:w-[40%] p-6">
             <p class="leagueSpartan text-gray-700 text-lg md:text-3xl mb-6">Sobre mim 👩🏽‍💻</p>
-            <p class="text-xs text-gray-500 md:text-lg mb-4">Tenho 21 anos, sou brasileira e moro em Três Lagoas, interior de Mato Grosso do Sul.</p>
-            <p class="text-xs text-gray-500 md:text-lg mb-4">Sou apaixonada por tecnologia! Atuo como Desenvolvedora Frontend Web há 3 anos. Durante 1 ano como Quality Assurance e transicionei para Dev em cerca de 6 meses.</p>
-            <p class="text-xs text-gray-500 md:text-lg">Curso Sistemas de Informação pela Universidade Federal de Mato Grosso do Sul (campus CPTL ||).</p>
+            <p class="text-xs text-gray-500 md:text-lg mb-4">Tenho 21 anos, sou brasileira e moro em Três Lagoas,
+                interior de Mato Grosso do Sul.</p>
+            <p class="text-xs text-gray-500 md:text-lg mb-4">Sou apaixonada por tecnologia! Atuo como Desenvolvedora
+                Frontend Web há 3 anos. Durante 1 ano como Quality Assurance e transicionei para Dev em cerca de 6
+                meses.</p>
+            <p class="text-xs text-gray-500 md:text-lg">Curso Sistemas de Informação pela Universidade Federal de Mato
+                Grosso do Sul (campus CPTL ||).</p>
         </div>
         <!-- <div class="bg-linear-to-r from-[#8C52FF] to-[#FF57F8] h-[150px] w-[150px] md:h-[350px] md:w-[350px] rounded-full m-2"> -->
-            <div class="flex justify-center items-center w-[20%] md:w-[25%] z-1">
-                <img src="./public/circle.svg" class="absolute w-[130px] md:w-[310px]"  alt="Circle">
-                <img src="./public/user.png" class="absolute w-[120px] md:w-[280px]" alt="User Image">
-            </div>
+        <div class="flex justify-center items-center w-[20%] md:w-[25%] z-1">
+            <img src="./public/circle.svg" class="absolute w-[130px] md:w-[310px]" alt="Circle">
+            <img src="./public/user.png" class="absolute w-[120px] md:w-[280px]" alt="User Image">
+        </div>
         <!-- </div> -->
 
-        
-        <img class="absolute left-0 right-0 w-full bottom-0 z-[0]" src="https://capsule-render.vercel.app/api?type=waving&height=150&color=0:c334eb,100:ff2176&section=footer"/>
+
+        <img class="absolute left-0 right-0 w-full bottom-0 z-[0]"
+            src="https://capsule-render.vercel.app/api?type=waving&height=150&color=0:c334eb,100:ff2176&section=footer" />
     </section>
 
     <section id="tech" class="flex justify-start items-start flex-row flex-wrap w-screen h-full">
-        <img class="absolute opacity-20 z-[1]" src="./public/vector2.svg" alt="" width="100%">
-        <img class="absolute opacity-20 z-[2]" src="./public/vector1.svg" alt="" width="100%">
+        <img class="absolute opacity-20 z-[1]" src="./public/vector2.svg" loading="lazy" alt="" width="100%">
+        <img class="absolute opacity-20 z-[2]" src="./public/vector1.svg" loading="lazy" alt="" width="100%">
 
         <div class="flex flex-col justify-center w-full p-6 sm:m-[150px]">
             <p class="leagueSpartan text-gray-700 text-3xl sm:text-5xl mb-2 p-4">Minhas techs</p>
 
             <div class="flex flex-row px-4">
-                <img src="./public/icons/html.svg" class="mr-2 w-8 sm:w-12" />
-                <img src="./public/icons/css3.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
-                <img src="./public/icons/sass.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
-                <img src="./public/icons/javascript.svg" class="mr-2 w-8 sm:w-12" class="mr-2 rounded-md" />
-                <img src="./public/icons/typescript.svg" class="mr-2 w-8 sm:w-12" class="mr-2 rounded-md" />
-                <img src="./public/icons/vuejs.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
+                <img src="./public/icons/html.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
+                <img src="./public/icons/css3.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
+                <img src="./public/icons/sass.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
+                <img src="./public/icons/javascript.svg" loading="lazy" class="mr-2 w-8 sm:w-12 rounded-md" />
+                <img src="./public/icons/typescript.svg" loading="lazy" class="mr-2 w-8 sm:w-12 rounded-md" />
+                <img src="./public/icons/vuejs.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
             </div>
             <div class="flex flex-row mt-1 p-4">
-                <img src="./public/icons/nuxtjs.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
-                <img src="./public/icons/vite.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
-                <img src="./public/icons/vuetify.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
-                <img src="./public/icons/tailwindcss.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
-                <img src="./public/icons/git.svg" class="mr-2 w-8 sm:w-12" class="mr-2" />
+                <img src="./public/icons/nuxtjs.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
+                <img src="./public/icons/vite.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
+                <img src="./public/icons/vuetify.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
+                <img src="./public/icons/tailwindcss.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
+                <img src="./public/icons/git.svg" loading="lazy" class="mr-2 w-8 sm:w-12" />
             </div>
 
             <section class="flex flex-row flex-wrap mt-8 gap-2">
@@ -112,7 +122,7 @@
 
                 <div class="box-right text-gray-700 w-[350px] border-1 border-gray-400 border-solid rounded-2xl p-6">
                     <p class="text-gray-700 leagueSpartan text-xl sm:text-3xl mb-2">Soft skills</p>
-    
+
                     <p class="text-sm md:text-lg">- Criatividade</p>
                     <p class="text-sm md:text-lg">- Trabalho em equipe</p>
                     <p class="text-sm md:text-lg">- Pensamento analítico e inovação</p>
@@ -129,60 +139,62 @@
         <div class="flex justify-center w-full p-6 sm:mx-[150px]">
             <p class="leagueSpartan absolute text-center sm:right-20 text-gray-700 text-3xl sm:text-5xl mb-6">Experiência</p>
 
-            <div class="container">
-        <!-- <h1 class="title">Experiência</h1> -->
-        
-        <div class="timeline-container" id="timeline">
-            <!-- Linha vertical principal -->
-            <div class="timeline-line">
-                <div class="timeline-line-fill" id="timelineFill"></div>
-            </div>
-            
-            <!-- Item 1 - Direita -->
-            <div class="timeline-item right" data-index="0">
-                <div class="timeline-content">
-                    <div class="duration">3 anos</div>
-                    <h3 class="leagueSpartan text-xl text-bold text-gray-700 mb-1">Desenvolvedora Front Web</h3>
-                    <div class="leading-6 text-sm text-gray-500">
-                        <p>Criando aplicações webs com diversas integrações (HTTPS / GraphQL) e validações.</p>
-                        <p>Tive a oportunidade de liderar projetos e auxiliar o time, bem como compartilhar conhecimento.</p>
-                        <p>Sempre estudando e adaptando o código para melhores versões.</p>
+            <div class="max-w-[1000px] min-h-[100vh] m-0 m-auto p-4 container">
+                <div class="timeline-container" id="timeline">
+                    <!-- Linha vertical principal -->
+                    <div class="timeline-line">
+                        <div class="timeline-line-fill" id="timelineFill"></div>
+                    </div>
+
+                    <!-- Item 1 - Direita -->
+                    <div class="timeline-item right" data-index="0">
+                        <div class="timeline-content">
+                            <div class="duration">3 anos</div>
+                            <h3 class="leagueSpartan text-xl text-bold text-gray-700 mb-1">Desenvolvedora Front Web</h3>
+                            <div class="leading-6 text-sm text-gray-500">
+                                <p>Criando aplicações webs com diversas integrações (HTTPS / GraphQL) e validações.</p>
+                                <p>Tive a oportunidade de liderar projetos e auxiliar o time, bem como compartilhar
+                                    conhecimento.</p>
+                                <p>Sempre estudando e adaptando o código para melhores versões.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot">
+                            <div class="dot-inner"></div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 - Esquerda -->
+                    <div class="timeline-item left" data-index="1">
+                        <div class="timeline-content">
+                            <div class="duration">6 meses</div>
+                            <h3 class="leagueSpartan text-xl text-bold text-gray-700 mb-1">Transição para
+                                desenvolvimento</h3>
+                            <div class="leading-6 text-sm text-gray-500">
+                                <p>Ainda atuando na área de QA mas obtendo conhecimento técnicos de frameworks SPA e
+                                    práticas clean code, além da mentoria com devs.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot">
+                            <div class="dot-inner"></div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 - Direita -->
+                    <div class="timeline-item right" data-index="2">
+                        <div class="timeline-content">
+                            <div class="duration">1 ano</div>
+                            <h3 class="leagueSpartan text-xl text-bold text-gray-700 mb-1">QA assurance</h3>
+                            <div class="leading-6 text-sm text-gray-500">
+                                <p>Testes e verificações de qualidade nos processos e produtos finais.</p>
+                                <p>Nesse tempo, aprimorei o olhar analítico e a capacidade para resolução de problemas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot">
+                            <div class="dot-inner"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-dot">
-                    <div class="dot-inner"></div>
-                </div>
-            </div>
-            
-            <!-- Item 2 - Esquerda -->
-            <div class="timeline-item left" data-index="1">
-                <div class="timeline-content">
-                    <div class="duration">6 meses</div>
-                    <h3 class="leagueSpartan text-xl text-bold text-gray-700 mb-1">Transição para desenvolvimento</h3>
-                    <div class="leading-6 text-sm text-gray-500">
-                        <p>Ainda atuando na área de QA mas obtendo conhecimento técnicos de frameworks SPA e práticas clean code, além da mentoria com devs.</p>
-                    </div>
-                </div>
-                <div class="timeline-dot">
-                    <div class="dot-inner"></div>
-                </div>
-            </div>
-            
-            <!-- Item 3 - Direita -->
-            <div class="timeline-item right" data-index="2">
-                <div class="timeline-content">
-                    <div class="duration">1 ano</div>
-                    <h3 class="leagueSpartan text-xl text-bold text-gray-700 mb-1">QA assurance</h3>
-                    <div class="leading-6 text-sm text-gray-500">
-                        <p>Testes e verificações de qualidade nos processos e produtos finais.</p>
-                        <p>Nesse tempo, aprimorei o olhar analítico e a capacidade para resolução de problemas.</p>
-                    </div>
-                </div>
-                <div class="timeline-dot">
-                    <div class="dot-inner"></div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section id="projetos" class="flex justify-center flex-col w-full px-4 mb-4">
@@ -191,12 +203,17 @@
         <section class="flex flex-row flex-wrap justify-center gap-4 items-center">
             <div class="box-left p-[1px] rounded-4xl bg-gradient-to-r from-[#8C52FF] to-[#FF57F8]">
                 <div class="relative sm:w-[400px] sm:min-h-[370px] bg-white rounded-4xl p-6">
-                    <p class="leagueSpartan text-md sm:text-2xl text-gray-700">Aplicativo para auxiliar na alfabetização de crianças com foco em TDAH</p>
+                    <p class="leagueSpartan text-md sm:text-2xl text-gray-700">Aplicativo para auxiliar na alfabetização
+                        de crianças com foco em TDAH</p>
                     <p class="text-xs sm:text-sm text-gray-400">22/07/2021</p>
-                    <p class="text-[12px] sm:text-sm mt-4 text-gray-600">Este aplicativo foi usado para o trabalho de conclusão de curso do IFMS. <br>Consiste em um aplicativo com a didática de um jogo para auxiliar crianças na alfabetização, especialmente crianças com Transtorno do Défict de Atenção com Hiperatividade (TDAH).</p>
+                    <p class="text-[12px] sm:text-sm mt-4 text-gray-600">Este aplicativo foi usado para o trabalho de
+                        conclusão de curso do IFMS. <br>Consiste em um aplicativo com a didática de um jogo para
+                        auxiliar crianças na alfabetização, especialmente crianças com Transtorno do Défict de Atenção
+                        com Hiperatividade (TDAH).</p>
                     <p class="text-xs my-4 text-gray-600">@diegovskrbm e @geordtl</p>
-    
-                    <a class="underline cursor-pointer text-xs text-[#8C52FF]" href="https://github.com/geordtl/TCC-TDAH" target="_blank">Github</a>
+
+                    <a class="underline cursor-pointer text-xs text-[#8C52FF]"
+                        href="https://github.com/geordtl/TCC-TDAH" target="_blank">Github</a>
                     <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ Java</p>
                 </div>
             </div>
@@ -204,12 +221,15 @@
                 <div class="relative sm:w-[400px] sm:h-[370px] bg-white rounded-4xl p-6">
                     <p class="leagueSpartan text-md sm:text-2xl text-gray-700">UFMS Farm</p>
                     <p class="text-xs sm:text-sm text-gray-400">25/11/2024</p>
-                    <p class="text-[12px] mt-4 text-gray-600">Projeto acadêmico visando conscientizar a ODS 15 (Objetivos da ONU - Vida terrestre) de forma gamificada e divertida.
-                        <br> Foram implementados mecanismos que encerram o cicle de vida da planta caso não seja cuidada.
+                    <p class="text-[12px] sm:text-sm mt-4 text-gray-600">Projeto acadêmico visando conscientizar a ODS 15
+                        (Objetivos da ONU - Vida terrestre) de forma gamificada e divertida.
+                        <br> Foram implementados mecanismos que encerram o ciclo de vida da planta caso não seja
+                        cuidada.
                     </p>
                     <p class="text-xs my-4 text-gray-600">@xeanm28x e @geordtl</p>
-    
-                    <a class="underline cursor-pointer text-xs text-[#8C52FF]" href="https://geordtl.itch.io/ufms-farm" target="_blank">Itch.io</a>
+
+                    <a class="underline cursor-pointer text-xs text-[#8C52FF]" href="https://geordtl.itch.io/ufms-farm"
+                        target="_blank">Itch.io</a>
                     <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ Unity, C#, LibreSprite</p>
                 </div>
             </div>
@@ -217,37 +237,46 @@
                 <div class="relative sm:w-[400px] sm:h-[370px] bg-white rounded-4xl p-6">
                     <p class="leagueSpartan text-md sm:text-2xl text-gray-700">Uber para idosos</p>
                     <p class="text-xs sm:text-sm text-gray-400">15/06/2023</p>
-                    <p class="text-[12px] mt-4 text-gray-600">Projeto acadêmico com apenas o Design criado a fim de auxiliar o processo de lomoção para idosos. Contando com perfis de auxiliares no aplicativo, assegurando mais segurança.
+                    <p class="text-[12px] sm:text-sm mt-4 text-gray-600">Projeto acadêmico com apenas o Design criado a fim de
+                        auxiliar o processo de locomoção para idosos. Contando com perfis de auxiliares no aplicativo,
+                        assegurando mais segurança.
                         <br> Validado e apresentado em sala.
                     </p>
                     <p class="text-xs my-4 text-gray-600">@chsabreu e @geordtl</p>
-    
-                    <a class="underline cursor-pointer text-xs text-[#8C52FF]" href="https://github.com/geordtl/Uber-Idosos" target="_blank">Github</a>
-                    <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ HTML, CSS</p>
+
+                    <a class="underline cursor-pointer text-xs text-[#8C52FF]"
+                        href="https://github.com/geordtl/Uber-Idosos" target="_blank">Github</a>
+                    <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ HTML, CSS, JS</p>
                 </div>
             </div>
             <div class="box-right p-[1px] rounded-4xl bg-gradient-to-r from-[#8C52FF] to-[#FF57F8]">
                 <div class="relative sm:w-[400px] sm:h-[370px] bg-white rounded-4xl p-6">
                     <p class="leagueSpartan text-md sm:text-2xl text-gray-700">Humor diário</p>
                     <p class="text-xs sm:text-sm text-gray-400">04/07/2025</p>
-                    <p class="text-[12px] mt-4 text-gray-600">Projeto acadêmico com o objetivo de registrar o humor diário do usuário, permitindo acessar o histório dos dias anteriores.
-                        <br> Integrado com Docker e requisição por Axios
+                    <p class="text-[12px] sm:text-sm mt-4 text-gray-600">Projeto acadêmico com o objetivo de registrar o humor
+                        diário do usuário, permitindo acessar o histórico dos dias anteriores.
+                        <br> Integrado com Docker e requisição com Axios
                     </p>
                     <p class="text-xs my-4 text-gray-600">@alisonfrd e @geordtl</p>
-    
-                    <a class="underline cursor-pointer text-xs text-[#8C52FF]" href="https://github.com/geordtl/Uber-Idosos" target="_blank">Github</a>
-                    <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ Vuejs, Tailwindcss, Docker, SQLAlchemy, Flask</p>
+
+                    <a class="underline cursor-pointer text-xs text-[#8C52FF]"
+                        href="https://github.com/geordtl/humor_diario_py_ufms" target="_blank">Github</a>
+                    <p class="text-[#8C52FF] max-sm:text-xs text-sm bottom-3 absolute">+ Vuejs, Tailwindcss, Docker, SQLAlchemy, Flask
+                    </p>
                 </div>
             </div>
             <div class="box-left p-[1px] rounded-4xl bg-gradient-to-r from-[#8C52FF] to-[#FF57F8]">
                 <div class="relative sm:w-[400px] sm:h-[370px] bg-white rounded-4xl p-6">
                     <p class="leagueSpartan text-md sm:text-2xl text-gray-700">ZapBoard</p>
                     <p class="text-xs sm:text-sm text-gray-400">30/05/2023</p>
-                    <p class="text-[12px] mt-4 text-gray-600">Projeto acadêmico com o objetivo de registrar entradas e saídas de uma empresa. Os indicadores são feitos com um cálculo em tempo real com os dados do banco.
+                    <p class="text-[12px] sm:text-sm mt-4 text-gray-600">Projeto acadêmico com o objetivo de registrar entradas e
+                        saídas de uma empresa. Os indicadores são feitos com um cálculo em tempo real com os dados do
+                        banco.
                     </p>
-                    <p class="text-xs my-4 text-gray-600">@geordtl</p>
-    
-                    <a class="underline cursor-pointer text-xs text-[#8C52FF]" href="https://github.com/geordtl/Uber-Idosos" target="_blank">Github</a>
+                    <p class="text-xs my-4 text-gray-600">@geordtl, @alisonfrd</p>
+
+                    <a class="underline cursor-pointer text-xs text-[#8C52FF]"
+                        href="https://github.com/geordtl/zapboard" target="_blank">Github</a>
                     <p class="text-[#8C52FF] text-sm bottom-3 absolute">+ Vuejs, Firestore</p>
                 </div>
             </div>
@@ -255,10 +284,12 @@
 
     </section>
 
-    <section id="contato" class="relative flex justify-center items-center flex-col h-[200px] w-full px-4"> 
-           <button id="sendmail" class="cursor-pointer text-white w-[200px] sm:w-[300px] shadow bg-[#FF57F8] rounded-lg p-4 z-1">Entrar em contato</button>
+    <section id="contato" class="relative flex justify-center items-center flex-col h-[200px] w-full px-4">
+        <button id="sendmail"
+            class="cursor-pointer text-white w-[200px] sm:w-[300px] shadow bg-gradient-to-r from-[#8C52FF] to-[#FF57F8] rounded-lg p-4 z-1">Entrar
+            em contato</button>
 
-           <img src="public/wave1.svg" alt="" class="absolute bottom-0 w-full" />
+        <img src="public/wave1.svg" alt="" loading="lazy" class="absolute bottom-0 w-full" />
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -269,4 +300,5 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
