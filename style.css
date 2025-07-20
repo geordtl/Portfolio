@@ -16,6 +16,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* body {
+    overflow-x: hidden;
+} */
+
+
 .leagueSpartan {
   font-family: "League Spartan", sans-serif;
   font-weight: 400;
